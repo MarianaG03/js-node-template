@@ -46,3 +46,22 @@ function buildFullName(nameInfo) {
 	return nameInfo.firstName + " " + nameInfo.lastName;
 }
 console.log(buildFullName(nameInfo));
+
+const character = {
+	name: "Hero",
+	weapon: "Sword",
+	level: " Level " + 1,
+};
+function createCharacterDescription(character) {
+	return (
+		character.level +
+		" " +
+		character.name +
+		" " +
+		"is wielding " +
+		" " +
+		character.weapon
+	);
+}
+
+console.log(createCharacterDescription(character));
