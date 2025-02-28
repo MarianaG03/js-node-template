@@ -26,3 +26,14 @@ function CombineStrings(world) {
 	return world.string1 + " " + world.string2;
 }
 console.log(CombineStrings(world));
+
+const cart = {
+	price: 100,
+	tax: 0.07,
+};
+
+function calculateTax(cart) {
+	return cart.price * cart.tax;
+}
+const cartTotal = cart.price + calculateTax(cart);
+console.log(cartTotal);
