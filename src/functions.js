@@ -37,3 +37,12 @@ function calculateTax(cart) {
 }
 const cartTotal = cart.price + calculateTax(cart);
 console.log(cartTotal);
+
+const nameInfo = {
+	firstName: "John",
+	lastName: "Doe",
+};
+function buildFullName(nameInfo) {
+	return nameInfo.firstName + " " + nameInfo.lastName;
+}
+console.log(buildFullName(nameInfo));
