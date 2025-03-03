@@ -78,3 +78,49 @@ const players = [
   // Display the best player and their K/D ratio
   console.log(`\nBest Player: ${bestPlayer.name} with a K/D Ratio of ${bestKDRatio}`);
   
+
+  //Bonus Extra Credit
+
+// Constants (values that do not change)
+const DAMAGE_MIN = 5;
+const DAMAGE_MAX = 25;
+const HEAL_MIN = 10;
+const HEAL_MAX = 20;
+const DODGE_CHANCE = 0.2; // 20% chance to dodge
+const HEAL_CHANCE = 0.3;  // 30% chance to heal
+
+
+  //Player Stats
+  let health = 100;
+  let totalDamageTaken = 0;
+  let totalHeals = 0;
+  let totalDodges = 0;
+  let rounds = 0;
+
+  console.log("Let the battle begin!");//Display text that battle is starting
+
+  //WHile Loop to simulate the battle
+  while (health > 0) {
+    rounds++;
+    //Playes percent chance to dodge
+    if (Math.random() < DODGE_CHANCE) {
+      totalDodges++;
+      console.log(`Round ${rounds}Player dodged the attack!`);
+    } else{
+        //Player takes damage if they don't dodge
+        let damage = Math.floor(Math.random()*(DAMAGE_MAX - DAMAGE_MIN + 1) + DAMAGE_MIN);
+        health -= damage;
+        totalDamageTaken += damage;
+        console.log(`Round ${rounds}Player took ${damage} damage!`);
+        // Damage is = 5-25+1+5 = 26 which is subtracted from the player's health. Console the displays the damage taken and round number.
+    }
+//Player has a chance to heal
+if (health > 0 && Math.random() < HEAL_CHANCE) {
+    let heal = Math.floor(Math.random() * (HEAL_MAX - HEAL_MIN + 1)) + HEAL_MIN;
+    health += heal;
+    totalHeals++;
+    console.log(`Player healed for ${heal} HP. New health: ${health}`);
+    //USES && to check if BOTH conditions are true! 
+    // Player heals for a random amount between 10 and 20. The heal amount is added to the player's health. The console displays the heal amount and the player's new health.
+}
+  }
