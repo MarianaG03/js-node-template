@@ -1,20 +1,17 @@
 {
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.formatOnSaveMode": "file",
   "editor.autoClosingBrackets": "beforeWhitespace",
   "editor.autoClosingComments": "beforeWhitespace",
   "editor.bracketPairColorization.enabled": true,
   "editor.codeActionsOnSave": {
-    "source.fixAll.biome": "explicit",
-    "source.organizeImports.biome": "explicit"
+    "source.fixAll.eslint": "explicit"
   },
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.formatOnSave": true,
-  "editor.formatOnSaveMode": "file",
   "editor.linkedEditing": true,
   "editor.wordWrap": "wordWrapColumn",
+  "eslint.enable": true,
   "files.autoSave": "onFocusChange",
-  "[javascript]": {
-    "editor.defaultFormatter": "biomejs.biome"
-  },
   "[json]": {
     "editor.formatOnSave": true
   }
