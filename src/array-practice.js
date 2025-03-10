@@ -24,3 +24,11 @@ const playersWithMoreFragsThanDeaths = players.filter(
 //Console will log the players with more frags than deaths useing the greater than operator to show more frage than deaths.
 // If More frags boolean is true, the player will be logged.
 console.log(playersWithMoreFragsThanDeaths);
+
+//Reduce Method
+// basically it is takin gthe sum of the first number and adding it to the next number in the array and so on.
+reduce((accumulator, currentValue) => {
+	console.log(`Accumulator: ${accumulator}, Current Value: ${currentValue}`);
+
+	return accumulator + currentValue;
+}, 0);
