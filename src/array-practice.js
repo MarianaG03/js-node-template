@@ -62,6 +62,8 @@ console.log(sortedPlayersbyFrags);
 // Coding Challenge!!
 
 //Coding Challenge 1
+
+//Thought Proceess the first thing i did was to think of the formula that would get the Total cost of the Backpack. Then i went back through the array methods and found the reduce method that would be able to add up the total cost of the backpack. I then used the reduce method to add up the total cost of the backpack.
 const backpackFullOfAmmo = [
 	{ item: "bullets", quantity: 10, priceEa: 0.5 },
 	{ item: "shotgun shells", quantity: 4, priceEa: 0.5 },
@@ -73,3 +75,66 @@ const totalCost = backpackFullOfAmmo.reduce(
 	0,
 );
 console.log(totalCost);
+
+//Coding Challenge 2
+
+//array
+const monsters = [
+	// Deals 10-60 damage per bite
+	{ name: "Cacodemon", health: 400, damage: 35 },
+
+	// Deals 15-75 damage per claw/fireball
+	{ name: "Baron of Hell", health: 1000, damage: 45 },
+
+	// Deals 20-200 damage per rocket
+	{ name: "Cyberdemon", health: 4000, damage: 125 },
+
+	// Deals 5-50 damage per bite
+	{ name: "Hell Knight", health: 800, damage: 25 },
+
+	// Deals 10-100 damage per bite
+	{ name: "Imp", health: 200, damage: 20 },
+
+	// Deals 5-25 damage per bite
+	{ name: "Lost Soul", health: 100, damage: 10 },
+
+	// Deals 5-50 damage per bite
+	{ name: "Pinky", health: 300, damage: 15 },
+
+	// Deals 10-100 damage per bite
+	{ name: "Revenant", health: 500, damage: 30 },
+
+	// Deals 5-50 damage per bite
+	{ name: "Spectre", health: 200, damage: 20 },
+
+	// Deals 5-50 damage per bite
+	{ name: "Spider Mastermind", health: 2000, damage: 50 },
+
+	// Deals 5-50 damage per bite
+	{ name: "Vile", health: 1000, damage: 40 },
+
+	// Deals 5-50 damage per bite
+	{ name: "Zombie", health: 100, damage: 5 },
+
+	// Deals 5-50 damage per bite
+	{ name: "Zombieman", health: 200, damage: 10 },
+];
+
+// Use map to create an array of monster names
+const monsterNames = monsters.map((monster) => monster.name);
+console.log("Monster Names:", monsterNames);
+
+//Filter Method to find monsters with more than 150 health
+const strongMonsters = monsters.filter((monster) => monster.health > 150);
+console.log("Strong Monsters:", strongMonsters);
+
+//Reduce Methos For Total Damage
+const totalDamage = monsters.reduce(
+	(total, monster) => total + monster.damage,
+	0,
+);
+console.log("Total Damage:", totalDamage);
+
+// Use sort to arrange monsters from highest to lowest damage
+const sortedByDamage = [...monsters].sort((a, b) => b.damage - a.damage);
+console.log("Monsters Sorted by Damage (Highest to Lowest):", sortedByDamage);
