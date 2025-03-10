@@ -6,3 +6,7 @@ console.log(numbers);
 
 5 % 2; //1
 4 % 2; //0
+
+//Putting Filters and Modulus Together
+const oddNumbers = numbers.filter((number) => number % 2);
+console.log(oddNumbers);
