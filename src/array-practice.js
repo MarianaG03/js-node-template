@@ -27,8 +27,9 @@ console.log(playersWithMoreFragsThanDeaths);
 
 //Reduce Method
 // basically it is takin gthe sum of the first number and adding it to the next number in the array and so on.
-reduce((accumulator, currentValue) => {
-	console.log(`Accumulator: ${accumulator}, Current Value: ${currentValue}`);
-
-	return accumulator + currentValue;
+//Reduce example with players array
+//Will add up the total frags of all players in the array
+const TotalFrags = players.reduce((total, player) => {
+	return total + player.frags;
 }, 0);
+console.log(TotalFrags);
