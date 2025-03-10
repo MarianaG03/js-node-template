@@ -33,3 +33,10 @@ const TotalFrags = players.reduce((total, player) => {
 	return total + player.frags;
 }, 0);
 console.log(TotalFrags);
+
+//usong the find method i learned this on wednesday!
+const moreFragsThanDeaths = players.find(
+	(player) => player.frags > player.deaths,
+);
+console.log(moreFragsThanDeaths);
+//will sort through the array and find the first player with more frags than deaths.
