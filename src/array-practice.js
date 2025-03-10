@@ -40,3 +40,16 @@ const moreFragsThanDeaths = players.find(
 );
 console.log(moreFragsThanDeaths);
 //will sort through the array and find the first player with more frags than deaths.
+
+//Some Method
+const fragsPLayed = players.some((player) => player.frags);
+console.log(fragsPLayed);
+//Will return true if any player has frags, if not it will return false.
+
+//Every Method
+const playersWithMoreFraqsThanDeaths = players.every(
+	(player) => player.frags > player.deaths,
+);
+console.log(playersWithMoreFraqsThanDeaths);
+//Will return true if all players have more frags than deaths, if not it will return false.
+// this is more general than the some method.
