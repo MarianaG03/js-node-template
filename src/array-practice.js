@@ -53,3 +53,8 @@ const playersWithMoreFraqsThanDeaths = players.every(
 console.log(playersWithMoreFraqsThanDeaths);
 //Will return true if all players have more frags than deaths, if not it will return false.
 // this is more general than the some method.
+
+//sort method
+const sortedPlayersbyFrags = players.sort((a, b) => b.frags - a.frags);
+console.log(sortedPlayersbyFrags);
+//Will sort the players by frags in descending order.
